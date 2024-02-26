@@ -1,0 +1,112 @@
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{cmap}
+\usepackage{enumitem}
+
+\usepackage{csvsimple}
+\usepackage{hyphenat} 
+\usepackage{amstext, amsmath,amsfonts,amssymb,amsthm,mathtools} 
+
+\usepackage{setspace}
+\onehalfspacing 
+
+\usepackage{geometry}
+\geometry{left=30mm}
+\geometry{right=10mm}
+\geometry{top=20mm}
+\geometry{bottom=20mm}
+
+\usepackage{graphicx}
+\graphicspath{{img/}} 
+
+\usepackage{threeparttable}
+\usepackage{bigdelim}
+
+
+\usepackage{setspace}
+\onehalfspacing % Полуторный интервал
+
+\frenchspacing
+\usepackage{indentfirst} % Красная строка
+
+\usepackage{cases}
+
+\usepackage[unicode,pdftex]{hyperref} % Ссылки в pdf
+\hypersetup{hidelinks}
+
+\usepackage{xcolor}
+\usepackage{listings}
+% Для листинга кода:
+\lstset{
+	basicstyle=\footnotesize\ttfamily,
+	numbers=left,
+	%	numberstyle=\tiny\color{plain},
+	numbersep=5pt,
+	tabsize=4,
+	extendedchars=\true,
+	breaklines=true,
+	%	keywordstyle=\color{blue},
+	frame=single,
+	%	stringstyle=\ttfamily\color{string}\ttfamily,
+	showspaces=false,
+	showtabs=false,
+	xleftmargin=17pt,
+	framexleftmargin=17pt,
+	framexrightmargin=5pt,
+	framexbottommargin=4pt,
+	showstringspaces=false,
+	inputencoding=utf8x,
+	keepspaces=true
+}
+\usepackage{chngcntr}
+\usepackage{caption}
+\captionsetup{labelsep = endash}
+\captionsetup[figure]{name = {Рисунок}, justification = centerlast}
+\captionsetup[lstlisting]{justification = raggedright, singlelinecheck=false}
+\captionsetup[table]{justification = centerlast}
+
+\captionsetup[table]{
+	justification=raggedright,
+	singlelinecheck=false
+}
+
+
+\renewcommand{\theequation}{\arabic{equation}}
+
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}{\LARGE\bfseries\centering}{\thechapter}{20pt}{\LARGE\bfseries}
+\titleformat{\section}{\large\bfseries}{\thesection}{20pt}{\Large\bfseries}
+
+\renewcommand\labelitemi{\ ---\ }
+\renewcommand\labelenumi{\theenumi.}
+
+\newcommand{\img}[3] {
+	\begin{figure}[h!]
+		\center{\includegraphics[scale = #1]{img/#2}}
+		\caption{#3}
+		\label{img:#2}
+	\end{figure}
+}
+
+\newcommand{\lst}[6]{
+\lstinputlisting[language=#6, firstline=#1, lastline=#2, label=lst:#4,caption=#5]{../src/#3}
+}
+
+
+\usepackage{siunitx,array,booktabs}
+
+\usepackage[figure,table]{totalcount} % Подсчет изображений, таблиц
+
+\usepackage{placeins}
+\usepackage{lastpage} % Для подсчета числа страниц
+
+\usepackage{pdfpages}
+
+
+\titlespacing*{\chapter}{0pt}{-30pt}{8pt}
+%\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+%\renewcommand{\thetable}{\thechapter.\arabic{table}}
